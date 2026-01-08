@@ -23,7 +23,9 @@ const DownloadButtons: React.FC<DownloadButtonsProps> = ({ className = '', size 
     <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
       {/* App Store Button */}
       <a
-        href="#"
+        href="https://apps.apple.com/gb/app/comfort-dry-eye-app/id6752471938"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`${sizeClasses[size]} bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-3`}
         aria-label="Download on App Store"
       >
@@ -36,7 +38,9 @@ const DownloadButtons: React.FC<DownloadButtonsProps> = ({ className = '', size 
 
       {/* Google Play Button */}
       <a
-        href="#"
+        href="https://play.google.com/store/apps/details?id=com.comfort.dryeyeapp"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`${sizeClasses[size]} bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-3`}
         aria-label="Get it on Google Play"
       >

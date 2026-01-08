@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ExternalLink, X } from 'lucide-react';
+import { Mail, ExternalLink, X, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import DownloadButtons from './DownloadButtons';
 
@@ -124,7 +125,7 @@ If you have any questions regarding the use of the Site, please contact us at in
             </div>
 
             {/* Main Footer Content */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
               {/* Brand */}
               <div>
                 <div className="flex items-center mb-4">
@@ -153,20 +154,54 @@ If you have any questions regarding the use of the Site, please contact us at in
               {/* Legal */}
               <div>
                 <h4 className="text-base md:text-lg font-bold text-white mb-6">Legal</h4>
-                <button
-                  onClick={() => setShowPrivacy(true)}
+                <Link
+                  to="/privacy"
                   className="flex items-center text-sm md:text-base text-gray-300 hover:text-primary-light transition-colors mb-2 font-light"
                 >
                   Privacy Policy
                   <ExternalLink className="w-4 h-4 ml-1" />
-                </button>
-                <button
-                  onClick={() => setShowTerms(true)}
+                </Link>
+                <Link
+                  to="/terms"
                   className="flex items-center text-sm md:text-base text-gray-300 hover:text-primary-light transition-colors font-light"
                 >
                   Terms of Use
                   <ExternalLink className="w-4 h-4 ml-1" />
-                </button>
+                </Link>
+              </div>
+
+              {/* Follow Us */}
+              <div>
+                <h4 className="text-base md:text-lg font-bold text-white mb-6">Follow Us</h4>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.instagram.com/comfortdryeyeapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-primary-light transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61579809602715"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-primary-light transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/comfortdryeyeapp/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-primary-light transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                </div>
               </div>
             </div>
 
